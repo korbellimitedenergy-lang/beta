@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Request Equiptement Info Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .request-section {
+      padding: 140px 20px;
+      background: radial-gradient(circle at top, #1a1a1a, #0d0d0d);
+      color: white;
+      min-height: 100vh;
+    }
+
+    .request-container {
+      max-width: 700px;
+      margin: auto;
+      background: #2c2c2c;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .request-container h1 {
+      margin-bottom: 10px;
+      font-size: 2rem;
+    }
+
+    .request-container p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .request-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .request-form input,
+    .request-form textarea {
+      padding: 14px 16px;
+      border: 1px solid #333;
+      background: #111;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .request-form input:focus,
+    .request-form textarea:focus {
+      border-color: #0a5540;
+      outline: none;
+      box-shadow: 0 0 10px rgba(10,85,64,0.4);
+    }
+
+    .request-form textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .request-btn {
+      background: linear-gradient(135deg, #0a5540, #0f7a5a);
+      color: #fff;
+      border: none;
+      padding: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .request-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(10,85,64,0.4);
+    }
+
+    .item-label {
+      font-size: 14px;
+      color: #ccc;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .request-container {
+        padding: 25px;
+      }
+    }
+    .info-section {
+  position: relative;
+  background: radial-gradient(circle at top, #1f1f1f, #0f0f0f);
+  color: white;
+  overflow: hidden;
+  padding: 200px;
+}
+.info-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+    pointer-events: none;
+  z-index: 0;
+
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+  animation: moveGrid 20s linear infinite;
+
+}
+
+@keyframes moveGrid {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(60px, 60px);
+  }
+}
+.info-section::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(10,85,64,0.15), transparent 70%);
+  top: -100px;
+  right: -100px;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+  </style>
+</head>
+<body>
+
+<section class="request-section info-section">
+  <div class="request-container">
+
+    <h1>Northview Forklift Repair Equiptment Request Inquiry</h1>
+    <p>Fill out the form below and we’ll get back to you shortly.</p>
+
+    <form class="request-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST">
+
+      <!-- ITEM NAME (AUTO FILLED) -->
+      <div>
+        <div class="item-label">Item</div>
+        <input type="text" id="itemName" name="Item" readonly>
+      </div>
+
+      <input type="text" name="Name" placeholder="Your Name" required>
+      <input type="email" name="Email" placeholder="Email Address" required>
+      <input type="tel" name="Phone" placeholder="Phone Number">
+
+      <textarea name="Message" placeholder="What would you like to know?"></textarea>
+
+      <!-- Optional hidden field -->
+      <input type="hidden" name="_subject" value="New Equipment Inquiry">
+
+      <button type="submit" class="request-btn">Send Request</button>
+    </form>
+
+  </div>
+</section>
+
+<script>
+  // GET ITEM NAME FROM URL
+  const params = new URLSearchParams(window.location.search);
+  const item = params.get("item");
+
+  if (item) {
+    document.getElementById("itemName").value = item;
+  } else {
+    document.getElementById("itemName").value = "General Inquiry";
+  }
+</script>
+
+</body>
+</html>

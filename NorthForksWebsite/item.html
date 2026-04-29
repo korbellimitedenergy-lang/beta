@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+ <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Gochi+Hand&display=swap" rel="stylesheet">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1QQF75ZE8S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1QQF75ZE8S');
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Item Used Forklifts, Scissor Lifts, Pallet Jacks, Telehandlers, Boom Lifts</title>
+<link rel="stylesheet" href="inventory.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+
+<body>
+
+<header>
+    <div class="top-bar">
+    <div class="top-right">
+      <h2>Owatonna, MN</h2>
+      <a class="phonestyle" href="tel:15074141677" onclick="gtag('event', 'phone_click', {
+  event_category: 'Contact',
+  event_label: 'Header Phone Number'
+});">
+  (507) 414-1677
+</a>
+    </div>
+  </div>
+  <div class="nav">
+
+    <!-- Logo -->
+    <a href="index.html">
+  <img src="images/logo.png" class="logo" alt="Logo">
+</a>
+<p class="quote">Southern Minnesota's Premier Forklift Repair Service</p>
+    <!-- Desktop Menu -->
+    <nav class="menu">
+      <a href="#">Home</a>
+      <a href="services.html">Services</a>
+      <a href="inventory.html">Used</a>
+      <a href="rental.html">Rentals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="mobile-phone" href="tel:15074141677" onclick="gtag('event', 'phone_click', {
+  event_category: 'Contact',
+  event_label: 'Header Phone Number'
+});">
+  (507) 414-1677
+</a>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+     <a href="inventory.html">Used</a>
+      <a href="rental.html">Rentals</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+<section class="item-section info-section">
+  <div class="item-container">
+
+    <img id="image" class="item-image">
+
+    <div class="item-info">
+      <h1 id="title"></h1>
+      <h2 id="price"></h2>
+      <p id="desc"></p>
+<div class="item-nav-container">
+      <button class="item-nav"
+  onclick="window.location.href='request.html?item=' + encodeURIComponent(document.getElementById('title').textContent)">
+  Request Info
+</button>
+</div>
+    </div>
+  </div>
+      <div class="item-nav-container">
+  <button id="prevBtn"class="item-nav">← Previous</button>
+  <button id="nextBtn"class="item-nav">Next →</button>
+</div>
+<div class="item-nav-container"><a href="inventory.html" class="item-nav">Back To Inventory</a></div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-container">
+
+    <!-- Logo / About -->
+    <div class="footer-section">
+      <img src="images/logo.png" alt="Logo" class="footer-logo">
+         </div>
+
+    <!-- Menu -->
+    <div class="footer-section">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="inventory.html">Used</a></li>
+        <li><a href="rental.html">Rentals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact-box">
+      <h4>Contact</h4>
+      3249 County Hwy 45 Doors 1-3,
+
+Owatonna, MN 55060
+      <p><a href="mailto:northviewforkliftrepair@gmail.com">northviewforkliftrepair@gmail.com</a></p>
+      <p><a href="tel:15074141677">(507) 414-1677</a></p>
+      <p>Business Hours: Mon–Fri: 7AM – 4PM</p>
+
+      <!-- Socials -->
+<div class="socials">
+  <a href="https://www.facebook.com/p/Northview-Forklift-Repair-LLC-100090781291535/" target="_blank" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p class="policy"><a class="footerlogo" href="https://www.korbellimitedenergy.com"></a><a class="footerstuffagain" href="mailto:korbellimitedenergy@gmail.com">Web Development Korbel Limited Energy</a><span class="policy">|</span><a class="footerstuffagain">© 2026 Northview Forklift Repair LLC</a><span class="policy">|</span><a href="privacy.html" class="policy">Privacy Policy</a>
+      <span>|</span>
+      <a class="policy" href="terms.html">Terms of Service</a>
+      </p>
+  </div>
+</footer>
+
+</body>
+</html>
+<script src="script.js"></script>

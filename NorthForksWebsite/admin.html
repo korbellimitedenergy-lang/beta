@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background:#111;color:white;padding:40px;">
+
+<h1>Admin Panel</h1>
+
+<!-- LOGIN -->
+<div id="loginBox">
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login(event)">Login</button>
+</div>
+
+<!-- DASHBOARD -->
+<div id="adminPanel" style="display:none;">
+
+  <h2>Add Listing</h2>
+
+  <input id="title" placeholder="Title">
+  <input id="price" placeholder="Price">
+  <input id="image" placeholder="Image URL">
+  <input id="category" placeholder="Category">
+  <input id="brand" placeholder="Brand">
+  <input id="fuel" placeholder="Fuel">
+  <input id="capacity" placeholder="Capacity">
+  
+  <button onclick="addItem()">Add Item</button>
+
+  <h2>Existing Listings</h2>
+  <div id="list"></div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+</body>
+</html>
