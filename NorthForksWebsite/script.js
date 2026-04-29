@@ -285,13 +285,3 @@ async function login(event) {
 }
 const { data: { session } } = await supabase.auth.getSession();
 
-if (session) {
-  // User came from reset link
-  const newPassword = prompt("Enter new password:");
-
-  await supabaseClient.auth.updateUser({
-    password: newPassword
-  });
-
-  alert("Password updated!");
-}
